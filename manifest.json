@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Redash SQL Formatter V2",
+    "version": "1.0",
+    "permissions": [
+      "activeTab"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://redash.data.n8s.jp/*"],
+        "js": ["contentScript.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
+  
