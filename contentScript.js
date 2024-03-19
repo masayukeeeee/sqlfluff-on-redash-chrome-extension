@@ -22,7 +22,11 @@ function formatSQL() {
     alert(data.formattedSQL);
   });
 
-  alert(sqlQuery)
+  // 整形されたSQLでエディターの内容を上書き
+  const newSqlCode = response.formattedSQL;
+
+  // エディターのドキュメントオブジェクトに新しい内容を設定
+  editor.getSession().doc.setValue(newSqlCode);
 }
   
 // MutationObserver を使ってエディターのツールバーが表示されたらボタンを挿入
@@ -67,3 +71,4 @@ observer.observe(document.body, {
   childList: true,
   subtree: true
 });
+
